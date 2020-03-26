@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: pcjoshiwindows 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pcjoshiwindows 
+    spec:
+      containers:
+        - name: pcjoshiwindows 
+          image: rlincregistry.azurecr.io/pcjoshiwindows
+          ports:
+          - containerPort: 80
